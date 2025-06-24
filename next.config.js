@@ -11,6 +11,8 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
+  // Allow cross-origin requests for development
+  allowedDevOrigins: ["*.fly.dev"],
 };
 
 module.exports = nextConfig;
