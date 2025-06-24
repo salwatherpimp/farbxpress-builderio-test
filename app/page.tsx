@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import {
   Star,
   Award,
@@ -14,7 +16,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-const Index = () => {
+export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header/Navigation */}
@@ -23,15 +25,16 @@ const Index = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <a href="https://www.farbxpress.ch/" className="cursor-pointer">
-                <img
+              <Link href="/" className="cursor-pointer">
+                <Image
                   src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_200,h_74,c_fit/v1748417852/farbXpress_logo_1_wiyumg.avif"
                   alt="Farbxpress Logo"
-                  width="152"
-                  height="56"
+                  width={152}
+                  height={56}
                   className="h-14 w-auto object-scale-down transition-transform duration-150 hover:scale-105"
+                  priority
                 />
-              </a>
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
@@ -40,18 +43,18 @@ const Index = () => {
                 <span>Leistungen</span>
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <a
-                href="https://www.farbxpress.ch/ueber-uns"
+              <Link
+                href="/ueber-uns"
                 className="px-4 py-2 font-medium text-gray-800 hover:text-gray-600 transition-colors duration-150"
               >
                 Über uns
-              </a>
-              <a
-                href="https://www.farbxpress.ch/referenzen"
+              </Link>
+              <Link
+                href="/referenzen"
                 className="px-4 py-2 font-medium text-gray-800 hover:text-gray-600 transition-colors duration-150"
               >
                 Referenzen
-              </a>
+              </Link>
               <button className="flex items-center bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-full font-medium gap-2 transition-colors duration-150 border border-gray-300">
                 <Hand className="h-4 w-4" />
                 <span className="whitespace-nowrap">Kontaktiere uns</span>
@@ -72,12 +75,15 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen overflow-hidden pt-24 pb-20 bg-gradient-to-r from-pink-600 to-pink-500">
         {/* Hero Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('https://res.cloudinary.com/dwlk9of7h/image/upload/w_1920,h_800,c_fill/v1748344821/comprised_m7hork.avif')`,
-          }}
-        />
+        <div className="absolute inset-0">
+          <Image
+            src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1920,h_800,c_fill/v1748344821/comprised_m7hork.avif"
+            alt="Professional painter working in Winterthur"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
 
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/30" />
@@ -143,12 +149,12 @@ const Index = () => {
 
             {/* CTA Button */}
             <div className="flex justify-center">
-              <a
-                href="https://www.farbxpress.ch/kontakt"
+              <Link
+                href="/kontakt"
                 className="inline-flex items-center justify-center bg-slate-100 hover:bg-white text-slate-900 px-8 py-3 rounded-lg font-medium text-sm shadow-lg hover:shadow-xl transition-all duration-150"
               >
                 Jetzt unverbindlich kontaktieren
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -174,18 +180,20 @@ const Index = () => {
                 Privatkunden, Architekten, Verwaltungen und öffentliche
                 Bauträger – vom Neubau bis zur sorgfältigen Sanierung.
               </p>
-              <a
-                href="https://www.farbxpress.ch/#leistungen"
+              <Link
+                href="/leistungen"
                 className="inline-flex items-center bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition-colors duration-150"
               >
                 Leistungen Entdecken
-              </a>
+              </Link>
             </div>
             <div className="relative">
               <div className="relative rounded-lg overflow-hidden shadow-lg">
-                <img
+                <Image
                   src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1748417853/ross-samir-farbxpress_gsnje4.avif"
                   alt="Unser erfahrenes Team bei der Arbeit"
+                  width={600}
+                  height={400}
                   className="w-full h-80 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/15 to-transparent" />
@@ -265,24 +273,32 @@ const Index = () => {
       <section className="bg-gray-50 border-t border-gray-200 py-10">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-center space-x-16">
-            <img
+            <Image
               src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-stadtWinterthur-1_pc7jkd.avif"
               alt="Stadt Winterthur"
+              width={160}
+              height={80}
               className="h-20 object-contain"
             />
-            <img
+            <Image
               src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-bankZimmerberg_bvitfl.avif"
               alt="Bank Zimmerberg"
+              width={160}
+              height={80}
               className="h-20 object-contain"
             />
-            <img
+            <Image
               src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-derbyPizza_mmkedc.avif"
               alt="Derby Pizza"
+              width={160}
+              height={80}
               className="h-20 object-contain"
             />
-            <img
+            <Image
               src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-sportamtstadtzu%CC%88rich_iemqys.avif"
               alt="Stadt Zürich Sportamt"
+              width={160}
+              height={80}
               className="h-20 object-contain"
             />
           </div>
@@ -301,7 +317,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                href: "https://www.farbxpress.ch/leistungen/malerarbeiten",
+                href: "/leistungen/malerarbeiten",
                 image:
                   "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-malen_gdvdci.avif",
                 title: "Malerarbeiten",
@@ -309,7 +325,7 @@ const Index = () => {
                   "Innen- und Aussenanstriche mit hochwertigen Materialien und präziser Ausführung.",
               },
               {
-                href: "https://www.farbxpress.ch/leistungen/fassadenrenovation",
+                href: "/leistungen/fassadenrenovation",
                 image:
                   "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1750015382/altbauwohnung-meilen_lrttoc.avif",
                 title: "Fassadenrenovation",
@@ -317,7 +333,7 @@ const Index = () => {
                   "Wir sorgen für neue Ausstrahlung und langfristigen Schutz Ihrer Fassade.",
               },
               {
-                href: "https://www.farbxpress.ch/leistungen/gipserarbeiten",
+                href: "/leistungen/gipserarbeiten",
                 image:
                   "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1749930415/verputz-malerarbeiten-duebendorf-1_zxk4wi.avif",
                 title: "Gipserarbeiten",
@@ -325,7 +341,7 @@ const Index = () => {
                   "Innenputz, Aussenputz und dekorative Oberflächen – sauber und langlebig.",
               },
               {
-                href: "https://www.farbxpress.ch/leistungen/tapezieren",
+                href: "/leistungen/tapezieren",
                 image:
                   "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-tapezieren_jvtgyo.avif",
                 title: "Tapezieren",
@@ -333,7 +349,7 @@ const Index = () => {
                   "Moderne oder klassische Tapeten – fachgerecht angebracht mit Auge fürs Detail.",
               },
               {
-                href: "https://www.farbxpress.ch/leistungen/spritzarbeiten",
+                href: "/leistungen/spritzarbeiten",
                 image:
                   "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-spritzen_ij8jsj.avif",
                 title: "Spritzarbeiten",
@@ -341,7 +357,7 @@ const Index = () => {
                   "Effiziente, gleichmässige Beschichtung grosser Flächen in Top-Qualität.",
               },
               {
-                href: "https://www.farbxpress.ch/leistungen/weitere-dienstleistungen",
+                href: "/leistungen/weitere-dienstleistungen",
                 image:
                   "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-weitereLeistungen_cyduu7.avif",
                 title: "Weitere Dienstleistungen",
@@ -349,16 +365,18 @@ const Index = () => {
                   "Erfahren Sie mehr über unsere Zusatzleistungen: Beschriftungen, Schimmelbehandlung und fugenlose Wand- und Bodenbeschichtungen.",
               },
             ].map((service, index) => (
-              <a
+              <Link
                 key={index}
                 href={service.href}
                 className="group cursor-pointer"
               >
                 <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden h-full transition-all duration-300 hover:shadow-md group-hover:scale-[1.02]">
                   <div className="relative h-48 overflow-hidden">
-                    <img
+                    <Image
                       src={service.image}
                       alt={service.title}
+                      width={400}
+                      height={200}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
@@ -372,7 +390,7 @@ const Index = () => {
                     </p>
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -393,9 +411,11 @@ const Index = () => {
             {/* Google Reviews Badge */}
             <div className="flex justify-center mb-12">
               <div className="flex items-center bg-white/90 backdrop-blur-sm rounded-xl px-4 py-2 border-2 border-white/20 shadow-lg">
-                <img
+                <Image
                   src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
                   alt="Google"
+                  width={20}
+                  height={20}
                   className="h-5 w-5"
                 />
                 <span className="text-gray-900 font-bold text-sm ml-2">
@@ -466,9 +486,11 @@ const Index = () => {
       {/* Final CTA Section */}
       <section className="bg-white relative">
         <div className="relative w-full">
-          <img
+          <Image
             src="https://res.cloudinary.com/dwlk9of7h/image/upload/f_webp,q_90,w_1920,h_600,c_fill/v1748418221/farbxpress-footerImage_l29cqf.avif"
             alt="Renovierter Raum mit hochwertiger Malerarbeit"
+            width={1920}
+            height={600}
             className="w-full h-[28rem] object-cover"
           />
           <div className="absolute inset-0 flex items-center justify-start px-4 md:px-12 py-12">
@@ -476,12 +498,12 @@ const Index = () => {
               <h2 className="text-white text-4xl md:text-5xl font-black leading-tight mb-9 filter drop-shadow-lg">
                 Farbxpress – persönlich, zuverlässig, hochwertig
               </h2>
-              <a
-                href="https://www.farbxpress.ch/kontakt"
+              <Link
+                href="/kontakt"
                 className="inline-flex items-center bg-white hover:bg-gray-50 text-gray-900 px-8 py-3 rounded-lg font-medium text-sm shadow-lg hover:shadow-xl transition-all duration-150"
               >
                 Jetzt unverbindlich kontaktieren
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -530,20 +552,20 @@ const Index = () => {
                 <ChevronDown className="ml-2 h-3 w-3" />
               </button>
               <div className="mt-2">
-                <a
-                  href="https://www.farbxpress.ch/ueber-uns"
+                <Link
+                  href="/ueber-uns"
                   className="block text-sm font-medium mb-2 hover:text-gray-300 transition-colors duration-150"
                 >
                   Über uns
-                </a>
+                </Link>
               </div>
               <div className="mt-2">
-                <a
-                  href="https://www.farbxpress.ch/referenzen"
+                <Link
+                  href="/referenzen"
                   className="block text-sm font-medium hover:text-gray-300 transition-colors duration-150"
                 >
                   Referenzen
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -586,12 +608,12 @@ const Index = () => {
                 </p>
               </div>
               <div className="flex">
-                <a
-                  href="https://www.farbxpress.ch/datenschutz"
+                <Link
+                  href="/datenschutz"
                   className="text-gray-400 text-xs hover:text-gray-300 transition-colors duration-150"
                 >
                   Datenschutzerklärung
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -599,6 +621,4 @@ const Index = () => {
       </footer>
     </div>
   );
-};
-
-export default Index;
+}
