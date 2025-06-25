@@ -181,62 +181,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="bg-gradient-to-br from-purple-100 to-pink-50 py-16 relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-4 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-gray-900 text-3xl font-bold leading-tight mb-4">
-              Warum Farbxpress wählen?
-            </h2>
-          </div>
-
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              {
-                icon: Award,
-                title: "Über 18 Jahre Erfahrung",
-                description:
-                  "Ein fundiertes Handwerk mit jahrzehntelanger Erfahrung bietet Ihnen professionelle Arbeiten in höchster Qualität. Unsere Expertise erfolgt durch bewährte Techniken und moderne Verfahren für langanhaltende Ergebnisse.",
-              },
-              {
-                icon: Heart,
-                title: "Inhabergeführt & persönlich",
-                description:
-                  "Als inhabergeführter Betrieb stehen wir für direkten Kontakt und individuelle Betreuung. Sie sprechen direkt mit den Entscheidungsträgern und erhalten persönliche Beratung für ihr Projekt.",
-              },
-              {
-                icon: Clock,
-                title: "Zuverlässig & termingerecht",
-                description:
-                  "Termintreue und Zuverlässigkeit sind die Grundpfeiler unserer Arbeit. Was wir versprechen, halten wir auch – für eine reibungslose Abwicklung Ihres Projekts ohne Verzögerungen.",
-              },
-              {
-                icon: MapPin,
-                title: "Regional verwurzelt",
-                description:
-                  "Seit Jahren im Grossraum Winterthur tätig, kennen wir die lokalen Gegebenheiten und Anforderungen. Kurze Anfahrtswege und schnelle Verfügbarkeit ist stets garantiert.",
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white/90 backdrop-blur-sm rounded-xl p-6 border border-white/20 h-full transition-all duration-300 hover:shadow-lg"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-lg font-semibold flex-1">
-                    {feature.title}
-                  </h3>
-                  <div className="bg-pink-100 rounded-full p-3 ml-4 flex-shrink-0">
-                    <feature.icon className="h-6 w-6 text-pink-600" />
-                  </div>
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WhyFarbxpressSection />
 
       {/* Client Logos Section */}
       <CompanyLogos />
