@@ -66,7 +66,7 @@ export function WhyFarbxpressSection({
 
   // Mobile accordion item component
   const MobileAccordionItem = ({ card }: { card: (typeof reasonCards)[0] }) => (
-    <AccordionItem value={card.id} className="border-white/20">
+    <AccordionItem value={card.id} className="border-none">
       <AccordionTrigger className="px-6 py-4 text-left hover:no-underline [&[data-state=open]>div>svg]:rotate-45">
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center space-x-4">
