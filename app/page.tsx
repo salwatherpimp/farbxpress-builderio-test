@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { GoogleReviewsCarousel } from "@/components/GoogleReviewsCarousel";
 import { CompanyLogos } from "@/components/CompanyLogos";
+import { WhyFarbxpressSection } from "@/components/WhyFarbxpressSection";
 
 export default function Home() {
   return (
