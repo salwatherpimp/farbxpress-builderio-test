@@ -22,7 +22,7 @@ export default {
     extend: {
       fontFamily: {
         sans: [
-          "Aktiv Grotesk",
+          "Inter",
           "system-ui",
           "-apple-system",
           "Segoe UI",
