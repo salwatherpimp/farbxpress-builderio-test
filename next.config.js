@@ -9,6 +9,7 @@ const nextConfig = {
       "images.pexels.com",
       "upload.wikimedia.org",
     ],
+    formats: ["image/avif", "image/webp"],
   },
 
   trailingSlash: false,
@@ -17,9 +18,37 @@ const nextConfig = {
     optimizePackageImports: ["lucide-react"],
   },
 
-  // optional:
-  // allowedDevOrigins wird von Next.js nicht verwendet,
-  // es sei denn du greifst manuell darauf zu
+  // Performance optimizations
+  swcMinify: true,
+
+  // Remove legacy JavaScript polyfills
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+
+  // Cache headers for static assets
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/(.*).(js|css|woff|woff2|eot|ttf|otf)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
