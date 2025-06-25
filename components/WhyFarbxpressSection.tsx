@@ -67,7 +67,7 @@ export function WhyFarbxpressSection({
   // Mobile accordion item component
   const MobileAccordionItem = ({ card }: { card: (typeof reasonCards)[0] }) => (
     <AccordionItem value={card.id} className="border-none">
-      <AccordionTrigger className="px-6 py-4 text-left hover:no-underline [&[data-state=open]>div>svg]:rotate-45">
+      <AccordionTrigger className="px-6 py-4 text-left hover:no-underline [&>svg]:hidden [&[data-state=open]_.plus-icon]:rotate-45">
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center space-x-4">
             <div className="bg-primary/10 rounded-full p-3 flex-shrink-0">
@@ -78,7 +78,7 @@ export function WhyFarbxpressSection({
             </h3>
           </div>
           <div className="flex-shrink-0">
-            <Plus className="h-5 w-5 text-gray-400 transition-transform duration-200" />
+            <Plus className="plus-icon h-5 w-5 text-gray-400 transition-transform duration-200" />
           </div>
         </div>
       </AccordionTrigger>
