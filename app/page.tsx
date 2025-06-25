@@ -36,7 +36,7 @@ export default function Home() {
         <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
           {/* Main Headline */}
           <h1 className="text-white text-3xl md:text-5xl font-bold mb-4 md:mb-6 filter drop-shadow-lg">
-            Ihr Maler in Winterthur für Präzision, Sauberkeit & Begeisterung
+            xIhr Maler in Winterthur für Präzision, Sauberkeit & Begeisterung
           </h1>
 
           {/* Subtitle Text */}
@@ -403,7 +403,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                text: "Ein engagiertes team,flexibel, zuverlässig, kreativ.Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde farbexpress immer wieder gern für mein Haus engagieren.",
+                text: "Ein engagiertes team,flexibel, zuverl��ssig, kreativ.Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde farbexpress immer wieder gern für mein Haus engagieren.",
                 author: "Ursula Wirtz",
               },
               {
