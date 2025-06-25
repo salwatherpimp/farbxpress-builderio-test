@@ -49,20 +49,18 @@ export function WhyFarbxpressSection({
 
   // Desktop card component with glassmorphism design
   const DesktopCard = ({ card }: { card: (typeof reasonCards)[0] }) => (
-    <div className="flex-shrink-0 basis-full md:basis-1/3 lg:basis-1/4 px-2">
-      <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 border border-white/20 h-full transition-all duration-300 hover:shadow-lg">
-        <div className="flex items-start justify-between mb-4">
-          <h3 className="text-lg font-semibold flex-1 font-sans text-gray-900">
-            {card.title}
-          </h3>
-          <div className="bg-primary/10 rounded-full p-3 ml-4 flex-shrink-0">
-            <card.icon className="h-6 w-6 text-primary" />
-          </div>
+    <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 border border-white/20 h-full transition-all duration-300 hover:shadow-lg">
+      <div className="flex items-start justify-between mb-4">
+        <h3 className="text-lg font-semibold flex-1 font-sans text-gray-900">
+          {card.title}
+        </h3>
+        <div className="bg-primary/10 rounded-full p-3 ml-4 flex-shrink-0">
+          <card.icon className="h-6 w-6 text-primary" />
         </div>
-        <p className="text-gray-600 text-sm leading-relaxed font-sans">
-          {card.description}
-        </p>
       </div>
+      <p className="text-gray-600 text-sm leading-relaxed font-sans">
+        {card.description}
+      </p>
     </div>
   );
 
