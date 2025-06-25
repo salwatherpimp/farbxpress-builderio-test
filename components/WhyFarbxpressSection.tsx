@@ -113,15 +113,18 @@ export function WhyFarbxpressSection({
           </div>
         </div>
 
-        {/* Mobile Layout - Vertical Accordion */}
-        <div className="md:hidden">
-          <div className="bg-white/90 backdrop-blur-sm rounded-xl border border-white/20">
-            <Accordion type="single" collapsible className="space-y-0">
-              {reasonCards.map((card) => (
-                <MobileAccordionItem key={card.id} card={card} />
-              ))}
-            </Accordion>
-          </div>
+        {/* Mobile Layout - Separated Accordion Items */}
+        <div className="md:hidden space-y-4">
+          {reasonCards.map((card) => (
+            <div
+              key={card.id}
+              className="bg-white/90 backdrop-blur-sm rounded-xl border border-white/20"
+            >
+              <Accordion type="single" collapsible>
+                <MobileAccordionItem card={card} />
+              </Accordion>
+            </div>
+          ))}
         </div>
       </div>
     </section>
