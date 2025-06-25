@@ -108,6 +108,11 @@
 
   /* Font display optimizations */
   @font-face {
+    font-family: "Aktiv Grotesk";
+    font-display: swap;
+  }
+
+  @font-face {
     font-family: "Inter";
     font-display: swap;
   }
