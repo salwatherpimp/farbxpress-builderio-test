@@ -117,3 +117,17 @@
     font-display: swap;
   }
 }
+
+@layer utilities {
+  .font-work {
+    font-family:
+      "Work Sans",
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      sans-serif;
+  }
+}
