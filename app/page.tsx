@@ -1,20 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
-import {
-  Star,
-  Award,
-  Heart,
-  Clock,
-  MapPin,
-  ChevronDown,
-  Phone,
-  Instagram,
-  Quote,
-} from "lucide-react";
-import { GoogleReviewsCarousel } from "@/components/GoogleReviewsCarousel";
-import { CompanyLogos } from "@/components/CompanyLogos";
-import { WhyFarbxpressSection } from "@/components/WhyFarbxpressSection";
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
