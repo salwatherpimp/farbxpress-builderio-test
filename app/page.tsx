@@ -11,6 +11,7 @@ import {
   Instagram,
   Quote,
 } from "lucide-react";
+import { GoogleReviewsCarousel } from "@/components/GoogleReviewsCarousel";
 
 export default function Home() {
   return (
@@ -36,7 +37,7 @@ export default function Home() {
         <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
           {/* Main Headline */}
           <h1 className="text-white text-3xl md:text-5xl font-bold mb-4 md:mb-6 filter drop-shadow-lg">
-            Ihr Maler in Winterthur für Präzision, Sauberkeit & Begeisterung
+            xIhr Maler in Winterthur für Präzision, Sauberkeit & Begeisterung
           </h1>
 
           {/* Subtitle Text */}
@@ -47,11 +48,14 @@ export default function Home() {
 
           {/* Google Rating Badge */}
           <div className="flex justify-center mb-6 md:mb-8">
-            <div className="flex items-center px-4 py-3 rounded-md border bg-white/20 backdrop-blur-sm border-white/30">
+            <div
+              className="flex items-center rounded-md border bg-white/20 backdrop-blur-sm border-white/30"
+              style={{ padding: "10px 14px" }}
+            >
               {/* Google Logo */}
               <svg
-                width="16"
-                height="16"
+                width="18"
+                height="18"
                 viewBox="0 0 24 24"
                 className="flex-shrink-0 mr-2"
               >
@@ -359,10 +363,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="bg-gradient-to-br from-purple-100 to-pink-50 py-16 relative overflow-hidden">
+      {/* Google Reviews Section */}
+      <section className="bg-gradient-to-br from-[#eddde5] to-[#f7f2f5] py-12 md:py-16 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
+          {/* Header Area */}
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-gray-900 text-3xl font-bold leading-tight mb-6">
               Das sagen unsere Kunden
             </h2>
@@ -380,6 +385,7 @@ export default function Home() {
                   width={20}
                   height={20}
                   className="h-5 w-5"
+                  loading="lazy"
                 />
                 <span className="text-gray-900 font-bold text-sm ml-2">
                   Google Bewertungen
@@ -399,50 +405,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                text: "Ein engagiertes team,flexibel, zuverlässig, kreativ.Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde farbexpress immer wieder gern für mein Haus engagieren.",
-                author: "Ursula Wirtz",
-              },
-              {
-                text: "Effizient, sehr professionell, sauber und zu einem zahlbaren Preis: So darf ich die Arbeit dieser beiden sympathischen Berufsleute zusammenfassen. Sie haben eine Wohnung in meinem über 200 Jahre alten MFH neu gestrichen. Die Aufgabe, Wände und Einbauschränke mit vielen Ecken und Kanten, Holztäfer, sowie Gips- und Mauerwerk kostengünstig und doch perfekt zu streichen, war nicht unbedingt einfach. Der Auftrag wurde jedoch zu meiner vollsten Zufriedenheit erledigt. Ich kann diese Firma wirklich sehr empfehlen!",
-                author: "Johanna Kelts",
-              },
-              {
-                text: "Für unser neues Restaurant, haben wir ein passendes Farbkonzept gesucht. Durch die Kompetente Beratung von Herr Niedehauser konnten wir unsere Vorstellungen zu einem fairen Preis umsetzen.",
-                author: "Frau achternbusch",
-              },
-            ].map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white/90 backdrop-blur-sm rounded-lg p-8 border-2 border-white/20 h-full transition-all duration-300 hover:shadow-lg transform hover:scale-[1.02]"
-              >
-                <div className="flex items-start">
-                  <Quote className="h-6 w-6 text-pink-600 flex-shrink-0 mt-1" />
-                  <div className="ml-1 flex-1">
-                    <div className="flex items-center mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="h-4 w-4 fill-yellow-400 text-yellow-400"
-                        />
-                      ))}
-                    </div>
-                    <p className="text-gray-700 leading-relaxed mb-6 text-sm overflow-hidden">
-                      {testimonial.text}
-                    </p>
-                    <div className="flex items-center">
-                      <span className="text-gray-900 font-semibold">
-                        {testimonial.author}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          {/* Carousel Container */}
+          <GoogleReviewsCarousel />
         </div>
       </section>
 
