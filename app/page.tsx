@@ -197,7 +197,7 @@ export default function Home() {
               {
                 href: "/leistungen/malerarbeiten",
                 image:
-                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-malen_gdvdci.avif",
+                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,f_avif,q_auto:eco/v1748417852/farbxpress-malen_gdvdci.avif",
                 title: "Malerarbeiten",
                 description:
                   "Innen- und Aussenanstriche mit hochwertigen Materialien und präziser Ausführung.",
@@ -205,7 +205,7 @@ export default function Home() {
               {
                 href: "/leistungen/fassadenrenovation",
                 image:
-                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1750015382/altbauwohnung-meilen_lrttoc.avif",
+                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,f_avif,q_auto:eco/v1750015382/altbauwohnung-meilen_lrttoc.avif",
                 title: "Fassadenrenovation",
                 description:
                   "Wir sorgen für neue Ausstrahlung und langfristigen Schutz Ihrer Fassade.",
@@ -213,7 +213,7 @@ export default function Home() {
               {
                 href: "/leistungen/gipserarbeiten",
                 image:
-                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1749930415/verputz-malerarbeiten-duebendorf-1_zxk4wi.avif",
+                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,f_avif,q_auto:eco/v1749930415/verputz-malerarbeiten-duebendorf-1_zxk4wi.avif",
                 title: "Gipserarbeiten",
                 description:
                   "Innenputz, Aussenputz und dekorative Oberflächen – sauber und langlebig.",
@@ -221,7 +221,7 @@ export default function Home() {
               {
                 href: "/leistungen/tapezieren",
                 image:
-                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-tapezieren_jvtgyo.avif",
+                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,f_avif,q_auto:eco/v1748417852/farbxpress-tapezieren_jvtgyo.avif",
                 title: "Tapezieren",
                 description:
                   "Moderne oder klassische Tapeten – fachgerecht angebracht mit Auge fürs Detail.",
@@ -229,7 +229,7 @@ export default function Home() {
               {
                 href: "/leistungen/spritzarbeiten",
                 image:
-                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-spritzen_ij8jsj.avif",
+                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,f_avif,q_auto:eco/v1748417852/farbxpress-spritzen_ij8jsj.avif",
                 title: "Spritzarbeiten",
                 description:
                   "Effiziente, gleichmässige Beschichtung grosser Flächen in Top-Qualität.",
@@ -237,7 +237,7 @@ export default function Home() {
               {
                 href: "/leistungen/weitere-dienstleistungen",
                 image:
-                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-weitereLeistungen_cyduu7.avif",
+                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,f_avif,q_auto:eco/v1748417852/farbxpress-weitereLeistungen_cyduu7.avif",
                 title: "Weitere Dienstleistungen",
                 description:
                   "Erfahren Sie mehr über unsere Zusatzleistungen: Beschriftungen, Schimmelbehandlung und fugenlose Wand- und Bodenbeschichtungen.",
