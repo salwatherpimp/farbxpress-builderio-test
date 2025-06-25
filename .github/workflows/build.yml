@@ -33,5 +33,5 @@ jobs:
           password: ${{ secrets.HP_SFTP_PASS }}
           protocol: ftp
           port: 21
-          local-dir: dist/
+          local-dir: out/
           server-dir: /www/vezivofa.myhostpoint.ch/
