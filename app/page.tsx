@@ -19,59 +19,6 @@ import {
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header/Navigation */}
-      <header className="fixed top-0 left-0 right-0 bg-white z-50 animate-in">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center">
-              <Link href="/" className="cursor-pointer">
-                <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_200,h_74,c_fit/v1748417852/farbXpress_logo_1_wiyumg.avif"
-                  alt="Farbxpress Logo"
-                  width={152}
-                  height={56}
-                  className="h-14 w-auto object-scale-down transition-transform duration-150 hover:scale-105"
-                  priority
-                />
-              </Link>
-            </div>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-1 relative z-50">
-              <button className="flex items-center px-4 py-2 rounded-md font-medium text-gray-800 hover:bg-gray-50 transition-colors duration-150">
-                <span>Leistungen</span>
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-              <Link
-                href="/ueber-uns"
-                className="px-4 py-2 font-medium text-gray-800 hover:text-gray-600 transition-colors duration-150"
-              >
-                Über uns
-              </Link>
-              <Link
-                href="/referenzen"
-                className="px-4 py-2 font-medium text-gray-800 hover:text-gray-600 transition-colors duration-150"
-              >
-                Referenzen
-              </Link>
-              <button className="flex items-center bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-full font-medium gap-2 transition-colors duration-150 border border-gray-300">
-                <Hand className="h-4 w-4" />
-                <span className="whitespace-nowrap">Kontaktiere uns</span>
-                <ChevronDown className="h-4 w-4" />
-              </button>
-            </nav>
-
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <button className="p-2 rounded-md bg-gray-100 border border-gray-300">
-                <Menu className="h-6 w-6 text-gray-800" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="relative min-h-screen overflow-hidden pt-24 pb-20 bg-gradient-to-r from-pink-600 to-pink-500">
         {/* Hero Background Image */}
