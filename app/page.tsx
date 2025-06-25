@@ -16,16 +16,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section
-        className="relative overflow-hidden pt-20 pb-12 md:pt-24 md:pb-20 text-white"
-        style={{ background: "linear-gradient(to right, #e7027e, #c9026a)" }}
-      >
+      <section className="relative overflow-hidden pt-20 pb-12 md:pt-24 md:pb-20 text-white bg-gradient-to-r from-[#e7027e] to-[#c9026a]">
         {/* Background Image Layer */}
-        <picture className="absolute inset-0">
-          <source
-            media="(min-width: 768px)"
-            srcSet="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1920,h_800,c_fill/v1748344821/comprised_m7hork.avif"
-          />
+        <div className="absolute inset-0">
           <Image
             src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1920,h_800,c_fill/v1748344821/comprised_m7hork.avif"
             alt="Professional painter working in Winterthur"
@@ -34,40 +27,27 @@ export default function Home() {
             className="w-full h-full object-cover object-center"
             priority
           />
-        </picture>
+        </div>
 
         {/* Overlay Layer */}
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-        />
+        <div className="absolute inset-0 bg-black/30" />
 
         {/* Content Container */}
         <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
           {/* Main Headline */}
-          <h1 className="text-white text-3xl md:text-5xl font-bold mb-4 md:mb-6 filter drop-shadow-lg font-['Aktiv_Grotesk',sans-serif] antialiased">
+          <h1 className="text-white text-3xl md:text-5xl font-bold mb-4 md:mb-6 filter drop-shadow-lg">
             Ihr Maler in Winterthur für Präzision, Sauberkeit & Begeisterung
           </h1>
 
           {/* Subtitle Text */}
-          <p
-            className="text-lg md:text-xl max-w-4xl mx-auto mb-6 md:mb-8 filter drop-shadow-md font-['Aktiv_Grotesk',sans-serif] antialiased"
-            style={{ color: "rgba(255, 255, 255, 0.95)" }}
-          >
+          <p className="text-lg md:text-xl text-white/95 max-w-4xl mx-auto mb-6 md:mb-8 filter drop-shadow-md">
             Mit mehr als 18 Jahren Erfahrung gestaltet Farbxpress Räume,
             Fassaden und mehr.
           </p>
 
           {/* Google Rating Badge */}
           <div className="flex justify-center mb-6 md:mb-8">
-            <div
-              className="flex items-center px-4 py-3 rounded-md border"
-              style={{
-                backgroundColor: "rgba(255, 255, 255, 0.2)",
-                backdropFilter: "blur(4px)",
-                borderColor: "rgba(255, 255, 255, 0.3)",
-              }}
-            >
+            <div className="flex items-center px-4 py-3 rounded-md border bg-white/20 backdrop-blur-sm border-white/30">
               {/* Google Logo */}
               <svg
                 width="16"
@@ -103,7 +83,7 @@ export default function Home() {
                     />
                   ))}
                 </div>
-                <span className="text-white font-medium text-sm ml-2 font-['Aktiv_Grotesk',sans-serif]">
+                <span className="text-white font-medium text-sm ml-2">
                   5.0 Google
                 </span>
               </div>
@@ -114,7 +94,7 @@ export default function Home() {
           <div className="flex justify-center">
             <Link
               href="/kontakt"
-              className="w-full md:w-auto inline-flex items-center justify-center bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-lg font-medium text-sm shadow-lg hover:shadow-xl transition-all duration-150 font-['Aktiv_Grotesk',sans-serif]"
+              className="w-full md:w-auto inline-flex items-center justify-center bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-lg font-medium text-sm shadow-lg hover:shadow-xl transition-all duration-150"
             >
               Jetzt unverbindlich kontaktieren
             </Link>
@@ -201,7 +181,7 @@ export default function Home() {
                 icon: Clock,
                 title: "Zuverlässig & termingerecht",
                 description:
-                  "Termintreue und Zuverlässigkeit sind die Grundpfeiler unserer Arbeit. Was wir versprechen, halten wir auch – für eine reibungslose Abwicklung Ihres Projekts ohne Verzögerungen.",
+                  "Termintreue und Zuverlässigkeit sind die Grundpfeiler unserer Arbeit. Was wir versprechen, halten wir auch – f��r eine reibungslose Abwicklung Ihres Projekts ohne Verzögerungen.",
               },
               {
                 icon: MapPin,
