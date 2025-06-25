@@ -47,7 +47,10 @@ export default function Home() {
 
           {/* Google Rating Badge */}
           <div className="flex justify-center mb-6 md:mb-8">
-            <div className="flex items-center px-4 py-3 rounded-md border bg-white/20 backdrop-blur-sm border-white/30">
+            <div
+              className="flex items-center rounded-md border bg-white/20 backdrop-blur-sm border-white/30"
+              style={{ padding: "10px 14px" }}
+            >
               {/* Google Logo */}
               <svg
                 width="16"
@@ -403,7 +406,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                text: "Ein engagiertes team,flexibel, zuverl��ssig, kreativ.Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde farbexpress immer wieder gern für mein Haus engagieren.",
+                text: "Ein engagiertes team,flexibel, zuverlässig, kreativ.Ich bin sehr zufrieden mit der sorgfältigen Ausführung und werde farbexpress immer wieder gern für mein Haus engagieren.",
                 author: "Ursula Wirtz",
               },
               {
