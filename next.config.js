@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // wichtig für statischen Export (z. B. für FTP-Hosting)
+  output: "export",
 
   images: {
-    unoptimized: true, // Erforderlich für statischen Export
+    unoptimized: true,
     domains: [
       "res.cloudinary.com",
       "images.pexels.com",
@@ -17,9 +17,9 @@ const nextConfig = {
     optimizePackageImports: ["lucide-react"],
   },
 
-  // Wird nur lokal in Dev-Umgebungen verwendet
-  // Hat keinen Effekt beim statischen Export
-  allowedDevOrigins: ["*.fly.dev"],
+  // optional:
+  // allowedDevOrigins wird von Next.js nicht verwendet,
+  // es sei denn du greifst manuell darauf zu
 };
 
 module.exports = nextConfig;
