@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  // Only use static export in production
+  ...(process.env.NODE_ENV === "production" && { output: "export" }),
 
   images: {
     unoptimized: true,
@@ -26,8 +27,12 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
 
-  // Cache headers for static assets
+  // Cache headers for static assets (only in production)
   async headers() {
+    if (process.env.NODE_ENV !== "production") {
+      return [];
+    }
+
     return [
       {
         source: "/(.*)",
