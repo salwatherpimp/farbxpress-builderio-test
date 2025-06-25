@@ -102,5 +102,18 @@
 
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Font display optimizations */
+  @font-face {
+    font-family: "Aktiv Grotesk";
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Work Sans";
+    font-display: swap;
   }
 }
