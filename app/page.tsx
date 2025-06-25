@@ -12,6 +12,7 @@ import {
   Quote,
 } from "lucide-react";
 import { GoogleReviewsCarousel } from "@/components/GoogleReviewsCarousel";
+import { CompanyLogos } from "@/components/CompanyLogos";
 
 export default function Home() {
   return (
