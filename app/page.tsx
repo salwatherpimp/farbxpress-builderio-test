@@ -6,14 +6,10 @@ import {
   Heart,
   Clock,
   MapPin,
-  Hand,
   ChevronDown,
-  Menu,
   Phone,
   Instagram,
   Quote,
-  ArrowLeft,
-  ArrowRight,
 } from "lucide-react";
 
 export default function Home() {
