@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useCallback } from "react";
+import { useEffect, useState } from "react";
 import { Star, Quote } from "lucide-react";
 import {
   Carousel,
