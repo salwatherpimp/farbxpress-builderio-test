@@ -57,18 +57,6 @@ export function WhyFarbxpressSection({
     },
   ];
 
-  // Auto-rotation effect for desktop carousel (4-second interval)
-  useEffect(() => {
-    if (!emblaApi) return;
-
-    const autoSlide = setInterval(() => {
-      emblaApi.scrollNext();
-    }, 4000);
-
-    // Cleanup interval on component unmount
-    return () => clearInterval(autoSlide);
-  }, [emblaApi]);
-
   // Desktop card component with glassmorphism design
   const DesktopCard = ({ card }: { card: (typeof reasonCards)[0] }) => (
     <div className="flex-shrink-0 basis-full md:basis-1/3 lg:basis-1/4 px-2">
