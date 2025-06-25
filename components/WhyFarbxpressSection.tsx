@@ -1,8 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Award, Heart, Clock, MapPin, Plus } from "lucide-react";
-import useEmblaCarousel from "embla-carousel-react";
 import {
   Accordion,
   AccordionContent,
@@ -17,14 +15,6 @@ interface WhyFarbxpressSectionProps {
 export function WhyFarbxpressSection({
   className = "",
 }: WhyFarbxpressSectionProps) {
-  // Carousel state management for desktop
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "start",
-    loop: true,
-    skipSnaps: false,
-    dragFree: false,
-  });
-
   // Content structure with 4 reason cards
   const reasonCards = [
     {
