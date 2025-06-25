@@ -29,6 +29,8 @@ export default function Home() {
             height={800}
             className="w-full h-full object-cover object-center"
             priority
+            fetchPriority="high"
+            sizes="100vw"
           />
         </div>
 
