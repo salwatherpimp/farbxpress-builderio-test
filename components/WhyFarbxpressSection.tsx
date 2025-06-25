@@ -66,8 +66,8 @@ export function WhyFarbxpressSection({
 
   // Mobile accordion item component
   const MobileAccordionItem = ({ card }: { card: (typeof reasonCards)[0] }) => (
-    <AccordionItem value={card.id} className="border-white/20">
-      <AccordionTrigger className="px-6 py-4 text-left hover:no-underline [&[data-state=open]>div>svg]:rotate-45">
+    <AccordionItem value={card.id} className="border-none">
+      <AccordionTrigger className="px-6 py-4 text-left hover:no-underline [&>svg]:hidden [&[data-state=open]_.plus-icon]:rotate-45">
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center space-x-4">
             <div className="bg-primary/10 rounded-full p-3 flex-shrink-0">
@@ -78,7 +78,7 @@ export function WhyFarbxpressSection({
             </h3>
           </div>
           <div className="flex-shrink-0">
-            <Plus className="h-5 w-5 text-gray-400 transition-transform duration-200" />
+            <Plus className="plus-icon h-5 w-5 text-gray-400 transition-transform duration-200" />
           </div>
         </div>
       </AccordionTrigger>
@@ -113,15 +113,18 @@ export function WhyFarbxpressSection({
           </div>
         </div>
 
-        {/* Mobile Layout - Vertical Accordion */}
-        <div className="md:hidden">
-          <div className="bg-white/90 backdrop-blur-sm rounded-xl border border-white/20">
-            <Accordion type="single" collapsible className="space-y-0">
-              {reasonCards.map((card) => (
-                <MobileAccordionItem key={card.id} card={card} />
-              ))}
-            </Accordion>
-          </div>
+        {/* Mobile Layout - Separated Accordion Items */}
+        <div className="md:hidden space-y-4">
+          {reasonCards.map((card) => (
+            <div
+              key={card.id}
+              className="bg-white/90 backdrop-blur-sm rounded-xl border border-white/20"
+            >
+              <Accordion type="single" collapsible>
+                <MobileAccordionItem card={card} />
+              </Accordion>
+            </div>
+          ))}
         </div>
       </div>
     </section>
