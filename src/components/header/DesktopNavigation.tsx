@@ -7,8 +7,8 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/src/components/ui/navigation-menu";
-import { ContactDropdown } from "./ContactDropdown";
+} from "@/components/ui/navigation-menu";
+import ContactDropdown from "./ContactDropdown";
 import { cn } from "@/lib/utils";
 
 interface DesktopNavigationProps {
