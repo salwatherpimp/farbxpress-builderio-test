@@ -238,40 +238,7 @@ export default function Home() {
       </section>
 
       {/* Client Logos Section */}
-      <section className="bg-gray-50 border-t border-gray-200 py-10">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex items-center justify-center space-x-16">
-            <Image
-              src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-stadtWinterthur-1_pc7jkd.avif"
-              alt="Stadt Winterthur"
-              width={160}
-              height={80}
-              className="h-20 object-contain"
-            />
-            <Image
-              src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-bankZimmerberg_bvitfl.avif"
-              alt="Bank Zimmerberg"
-              width={160}
-              height={80}
-              className="h-20 object-contain"
-            />
-            <Image
-              src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-derbyPizza_mmkedc.avif"
-              alt="Derby Pizza"
-              width={160}
-              height={80}
-              className="h-20 object-contain"
-            />
-            <Image
-              src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_160,h_80,c_fit/v1749284819/logo-sportamtstadtzu%CC%88rich_iemqys.avif"
-              alt="Stadt Zürich Sportamt"
-              width={160}
-              height={80}
-              className="h-20 object-contain"
-            />
-          </div>
-        </div>
-      </section>
+      <CompanyLogos />
 
       {/* Services Section */}
       <section className="bg-gray-50 py-16">
