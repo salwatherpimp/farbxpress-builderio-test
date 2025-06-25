@@ -23,7 +23,7 @@ export default function Home() {
         {/* Background Image Layer */}
         <div className="absolute inset-0">
           <Image
-            src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1920,h_800,c_fill/v1748344821/comprised_m7hork.avif"
+            src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1920,h_800,c_fill,f_avif,q_auto/v1748344821/comprised_m7hork.avif"
             alt="Professional painter working in Winterthur"
             width={1920}
             height={800}
@@ -31,6 +31,11 @@ export default function Home() {
             priority
             fetchPriority="high"
             sizes="100vw"
+            srcSet="
+              https://res.cloudinary.com/dwlk9of7h/image/upload/w_768,h_400,c_fill,f_avif,q_auto/v1748344821/comprised_m7hork.avif 768w,
+              https://res.cloudinary.com/dwlk9of7h/image/upload/w_1200,h_600,c_fill,f_avif,q_auto/v1748344821/comprised_m7hork.avif 1200w,
+              https://res.cloudinary.com/dwlk9of7h/image/upload/w_1920,h_800,c_fill,f_avif,q_auto/v1748344821/comprised_m7hork.avif 1920w
+            "
           />
         </div>
 
