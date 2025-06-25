@@ -34,7 +34,6 @@ export function HeaderLogo({ isScrolled }: HeaderLogoProps) {
             height={48}
             className="h-12 md:h-14 w-auto object-scale-down transition-transform duration-150 hover:scale-105"
             priority
-            loading="lazy"
             decoding="async"
           />
         </picture>
