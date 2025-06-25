@@ -327,11 +327,13 @@ export default function Home() {
       <section className="bg-white relative">
         <div className="relative w-full">
           <Image
-            src="https://res.cloudinary.com/dwlk9of7h/image/upload/f_webp,q_90,w_1920,h_600,c_fill/v1748418221/farbxpress-footerImage_l29cqf.avif"
+            src="https://res.cloudinary.com/dwlk9of7h/image/upload/f_avif,q_auto:eco,w_1920,h_600,c_fill/v1748418221/farbxpress-footerImage_l29cqf.avif"
             alt="Renovierter Raum mit hochwertiger Malerarbeit"
             width={1920}
             height={600}
             className="w-full h-[28rem] object-cover"
+            loading="lazy"
+            sizes="100vw"
           />
           <div className="absolute inset-0 flex items-center justify-start px-4 md:px-12 py-12">
             <div className="max-w-lg text-left">
