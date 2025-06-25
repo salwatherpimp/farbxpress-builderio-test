@@ -148,21 +148,16 @@ export default function Home() {
             <div className="relative">
               {/* Image Container */}
               <div className="relative rounded-lg overflow-hidden shadow-lg">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcSet="https://res.cloudinary.com/dwlk9of7h/image/upload/v1748417853/ross-samir-farbxpress_gsnje4.avif"
-                  />
-                  <Image
-                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1748417853/ross-samir-farbxpress_gsnje4.avif"
-                    alt="Unser erfahrenes Team bei der Arbeit"
-                    width={600}
-                    height={400}
-                    className="w-full h-64 md:h-80 object-cover object-top"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
+                <Image
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_600,h_400,c_fill,f_avif,q_auto/v1748417853/ross-samir-farbxpress_gsnje4.avif"
+                  alt="Unser erfahrenes Team bei der Arbeit"
+                  width={600}
+                  height={400}
+                  className="w-full h-64 md:h-80 object-cover object-top"
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
 
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/15 to-transparent" />
