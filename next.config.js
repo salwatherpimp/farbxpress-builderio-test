@@ -19,9 +19,6 @@ const nextConfig = {
     optimizePackageImports: ["lucide-react"],
   },
 
-  // Performance optimizations
-  swcMinify: true,
-
   // Remove legacy JavaScript polyfills
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
