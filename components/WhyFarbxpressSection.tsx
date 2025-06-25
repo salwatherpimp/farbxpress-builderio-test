@@ -104,24 +104,12 @@ export function WhyFarbxpressSection({
           </h2>
         </div>
 
-        {/* Desktop Layout - Horizontal Carousel */}
+        {/* Desktop Layout - Static Grid */}
         <div className="hidden md:block">
-          <div className="embla overflow-hidden" ref={emblaRef}>
-            <div className="embla__container flex">
-              {/* First slide with 3-4 cards */}
-              <div className="embla__slide flex-shrink-0 basis-full flex">
-                {reasonCards.slice(0, 3).map((card) => (
-                  <DesktopCard key={card.id} card={card} />
-                ))}
-              </div>
-
-              {/* Second slide with remaining cards + first card for smooth loop */}
-              <div className="embla__slide flex-shrink-0 basis-full flex">
-                <DesktopCard card={reasonCards[3]} />
-                <DesktopCard card={reasonCards[0]} />
-                <DesktopCard card={reasonCards[1]} />
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {reasonCards.map((card) => (
+              <DesktopCard key={card.id} card={card} />
+            ))}
           </div>
         </div>
 
