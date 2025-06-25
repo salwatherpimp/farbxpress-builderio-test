@@ -6,168 +6,114 @@ import {
   Heart,
   Clock,
   MapPin,
-  Hand,
   ChevronDown,
-  Menu,
   Phone,
   Instagram,
   Quote,
-  ArrowLeft,
-  ArrowRight,
 } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header/Navigation */}
-      <header className="fixed top-0 left-0 right-0 bg-white z-50 animate-in">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center">
-              <Link href="/" className="cursor-pointer">
-                <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_200,h_74,c_fit/v1748417852/farbXpress_logo_1_wiyumg.avif"
-                  alt="Farbxpress Logo"
-                  width={152}
-                  height={56}
-                  className="h-14 w-auto object-scale-down transition-transform duration-150 hover:scale-105"
-                  priority
-                />
-              </Link>
-            </div>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-1 relative z-50">
-              <button className="flex items-center px-4 py-2 rounded-md font-medium text-gray-800 hover:bg-gray-50 transition-colors duration-150">
-                <span>Leistungen</span>
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-              <Link
-                href="/ueber-uns"
-                className="px-4 py-2 font-medium text-gray-800 hover:text-gray-600 transition-colors duration-150"
-              >
-                Über uns
-              </Link>
-              <Link
-                href="/referenzen"
-                className="px-4 py-2 font-medium text-gray-800 hover:text-gray-600 transition-colors duration-150"
-              >
-                Referenzen
-              </Link>
-              <button className="flex items-center bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-full font-medium gap-2 transition-colors duration-150 border border-gray-300">
-                <Hand className="h-4 w-4" />
-                <span className="whitespace-nowrap">Kontaktiere uns</span>
-                <ChevronDown className="h-4 w-4" />
-              </button>
-            </nav>
-
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <button className="p-2 rounded-md bg-gray-100 border border-gray-300">
-                <Menu className="h-6 w-6 text-gray-800" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
-      <section className="relative min-h-screen overflow-hidden pt-24 pb-20 bg-gradient-to-r from-pink-600 to-pink-500">
-        {/* Hero Background Image */}
+      <section className="relative overflow-hidden pt-20 pb-12 md:pt-24 md:pb-20 text-white bg-gradient-to-r from-[#e7027e] to-[#c9026a]">
+        {/* Background Image Layer */}
         <div className="absolute inset-0">
           <Image
             src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1920,h_800,c_fill/v1748344821/comprised_m7hork.avif"
             alt="Professional painter working in Winterthur"
-            fill
-            className="object-cover"
+            width={1920}
+            height={800}
+            className="w-full h-full object-cover object-center"
             priority
           />
         </div>
 
-        {/* Dark Overlay */}
+        {/* Overlay Layer */}
         <div className="absolute inset-0 bg-black/30" />
 
-        {/* Hero Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-4 text-center min-h-screen flex items-center">
-          <div className="w-full">
-            {/* Main Headline */}
-            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 filter drop-shadow-lg">
-              Der Maleryx in Winterthur für Präzision, Sauberkeit & Begeisterung
-            </h1>
+        {/* Content Container */}
+        <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
+          {/* Main Headline */}
+          <h1 className="text-white text-3xl md:text-5xl font-bold mb-4 md:mb-6 filter drop-shadow-lg">
+            Ihr Maler in Winterthur für Präzision, Sauberkeit & Begeisterung
+          </h1>
 
-            {/* Subheadline */}
-            <p className="text-white/95 text-lg md:text-xl lg:text-2xl leading-relaxed mb-8 max-w-4xl mx-auto filter drop-shadow-md">
-              Mit mehr als 18 Jahren Erfahrung gestaltet Farbxpress Räume,
-              Fassaden und mehr.
-            </p>
+          {/* Subtitle Text */}
+          <p className="text-lg md:text-xl text-white/95 max-w-4xl mx-auto mb-6 md:mb-8 filter drop-shadow-md">
+            Mit mehr als 18 Jahren Erfahrung gestaltet Farbxpress Räume,
+            Fassaden und mehr.
+          </p>
 
-            {/* Google Rating Badge */}
-            <div className="flex justify-center mb-8">
-              <div className="flex items-center bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/30">
-                {/* Google Logo */}
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  className="flex-shrink-0 mr-2"
-                >
-                  <path
-                    fill="#4285F4"
-                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
-                  />
-                  <path
-                    fill="#34A853"
-                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-                  />
-                  <path
-                    fill="#FBBC05"
-                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
-                  />
-                  <path
-                    fill="#EA4335"
-                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
-                  />
-                </svg>
+          {/* Google Rating Badge */}
+          <div className="flex justify-center mb-6 md:mb-8">
+            <div className="flex items-center px-4 py-3 rounded-md border bg-white/20 backdrop-blur-sm border-white/30">
+              {/* Google Logo */}
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                className="flex-shrink-0 mr-2"
+              >
+                <path
+                  fill="#4285F4"
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                />
+                <path
+                  fill="#34A853"
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                />
+                <path
+                  fill="#FBBC05"
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                />
+                <path
+                  fill="#EA4335"
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                />
+              </svg>
 
-                {/* Stars and Rating */}
-                <div className="flex items-center">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="h-3 w-3 fill-yellow-400 text-yellow-400"
-                      />
-                    ))}
-                  </div>
-                  <span className="text-white font-medium text-sm ml-2">
-                    5.0 Google
-                  </span>
+              {/* Stars and Rating */}
+              <div className="flex items-center">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-3 w-3 fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
                 </div>
+                <span className="text-white font-medium text-sm ml-2">
+                  5.0 Google
+                </span>
               </div>
             </div>
+          </div>
 
-            {/* CTA Button */}
-            <div className="flex justify-center">
-              <Link
-                href="/kontakt"
-                className="inline-flex items-center justify-center bg-slate-100 hover:bg-white text-slate-900 px-8 py-3 rounded-lg font-medium text-sm shadow-lg hover:shadow-xl transition-all duration-150"
-              >
-                Jetzt unverbindlich kontaktieren
-              </Link>
-            </div>
+          {/* Call-to-Action Button */}
+          <div className="flex justify-center">
+            <Link
+              href="/kontakt"
+              className="w-full md:w-auto inline-flex items-center justify-center bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-lg font-medium text-sm shadow-lg hover:shadow-xl transition-all duration-150"
+            >
+              Jetzt unverbindlich kontaktieren
+            </Link>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-12 md:py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Text Column (Left) */}
             <div>
-              <h2 className="text-gray-900 text-3xl font-bold leading-tight mb-4">
+              {/* Title */}
+              <h2 className="text-gray-900 text-2xl md:text-3xl font-bold mb-4">
                 Regionaler Malerbetrieb für Umbau, Renovation & Neubau
               </h2>
+
+              {/* Description */}
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Mit langjähriger Erfahrung und echter Leidenschaft für das
                 Malerhandwerk bieten wir als Fachbetrieb hochwertige Innen- und
@@ -175,29 +121,46 @@ export default function Home() {
                 Anstriche, Spritzarbeiten, fugenlose Wand- und
                 Bodenbeschichtungen, Tapezierarbeiten, Fassadenrenovationen,
                 Gipserarbeiten, individuelle Beschriftungen oder
-                Schimmelbehandlungen – wir bieten Ihnen alles aus einer
-                Hand.&nbsp;Farbxpress ist der verlässliche Partner für
-                Privatkunden, Architekten, Verwaltungen und öffentliche
-                Bauträger – vom Neubau bis zur sorgfältigen Sanierung.
+                Schimmelbehandlungen – wir bieten Ihnen alles aus einer Hand.
+                Farbxpress ist der verlässliche Partner für Privatkunden,
+                Architekten, Verwaltungen und öffentliche Bauträger – vom Neubau
+                bis zur sorgfältigen Sanierung.
               </p>
+
+              {/* Call-to-Action Button */}
               <Link
-                href="/leistungen"
+                href="#leistungen"
                 className="inline-flex items-center bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition-colors duration-150"
               >
                 Leistungen Entdecken
               </Link>
             </div>
+
+            {/* Image Column (Right) - CRITICAL IMAGE POSITIONING */}
             <div className="relative">
+              {/* Image Container */}
               <div className="relative rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1748417853/ross-samir-farbxpress_gsnje4.avif"
-                  alt="Unser erfahrenes Team bei der Arbeit"
-                  width={600}
-                  height={400}
-                  className="w-full h-80 object-cover"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcSet="https://res.cloudinary.com/dwlk9of7h/image/upload/v1748417853/ross-samir-farbxpress_gsnje4.avif"
+                  />
+                  <Image
+                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1748417853/ross-samir-farbxpress_gsnje4.avif"
+                    alt="Unser erfahrenes Team bei der Arbeit"
+                    width={600}
+                    height={400}
+                    className="w-full h-64 md:h-80 object-cover object-top"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+
+                {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/15 to-transparent" />
-                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2">
+
+                {/* Text Overlay (Bottom left) */}
+                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2">
                   <p className="text-gray-900 font-medium text-sm">
                     Unser erfahrenes Team
                   </p>
