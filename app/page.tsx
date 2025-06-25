@@ -36,7 +36,7 @@ export default function Home() {
           <div className="w-full">
             {/* Main Headline */}
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 filter drop-shadow-lg">
-              Der Maleryx in Winterthur für Präzision, Sauberkeit & Begeisterung
+              Der Maler in Winterthur für Präzision, Sauberkeit & Begeisterung
             </h1>
 
             {/* Subheadline */}
