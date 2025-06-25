@@ -103,13 +103,17 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-12 md:py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Text Column (Left) */}
             <div>
-              <h2 className="text-gray-900 text-3xl font-bold leading-tight mb-4">
+              {/* Title */}
+              <h2 className="text-gray-900 text-2xl md:text-3xl font-bold mb-4">
                 Regionaler Malerbetrieb für Umbau, Renovation & Neubau
               </h2>
+
+              {/* Description */}
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Mit langjähriger Erfahrung und echter Leidenschaft für das
                 Malerhandwerk bieten wir als Fachbetrieb hochwertige Innen- und
@@ -117,29 +121,46 @@ export default function Home() {
                 Anstriche, Spritzarbeiten, fugenlose Wand- und
                 Bodenbeschichtungen, Tapezierarbeiten, Fassadenrenovationen,
                 Gipserarbeiten, individuelle Beschriftungen oder
-                Schimmelbehandlungen – wir bieten Ihnen alles aus einer
-                Hand.&nbsp;Farbxpress ist der verlässliche Partner für
-                Privatkunden, Architekten, Verwaltungen und öffentliche
-                Bauträger – vom Neubau bis zur sorgfältigen Sanierung.
+                Schimmelbehandlungen – wir bieten Ihnen alles aus einer Hand.
+                Farbxpress ist der verlässliche Partner für Privatkunden,
+                Architekten, Verwaltungen und öffentliche Bauträger – vom Neubau
+                bis zur sorgfältigen Sanierung.
               </p>
+
+              {/* Call-to-Action Button */}
               <Link
-                href="/leistungen"
+                href="#leistungen"
                 className="inline-flex items-center bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition-colors duration-150"
               >
                 Leistungen Entdecken
               </Link>
             </div>
+
+            {/* Image Column (Right) - CRITICAL IMAGE POSITIONING */}
             <div className="relative">
+              {/* Image Container */}
               <div className="relative rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1748417853/ross-samir-farbxpress_gsnje4.avif"
-                  alt="Unser erfahrenes Team bei der Arbeit"
-                  width={600}
-                  height={400}
-                  className="w-full h-80 object-cover"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcSet="https://res.cloudinary.com/dwlk9of7h/image/upload/v1748417853/ross-samir-farbxpress_gsnje4.avif"
+                  />
+                  <Image
+                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1748417853/ross-samir-farbxpress_gsnje4.avif"
+                    alt="Unser erfahrenes Team bei der Arbeit"
+                    width={600}
+                    height={400}
+                    className="w-full h-64 md:h-80 object-cover object-top"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+
+                {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/15 to-transparent" />
-                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2">
+
+                {/* Text Overlay (Bottom left) */}
+                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2">
                   <p className="text-gray-900 font-medium text-sm">
                     Unser erfahrenes Team
                   </p>
@@ -181,7 +202,7 @@ export default function Home() {
                 icon: Clock,
                 title: "Zuverlässig & termingerecht",
                 description:
-                  "Termintreue und Zuverlässigkeit sind die Grundpfeiler unserer Arbeit. Was wir versprechen, halten wir auch – f��r eine reibungslose Abwicklung Ihres Projekts ohne Verzögerungen.",
+                  "Termintreue und Zuverlässigkeit sind die Grundpfeiler unserer Arbeit. Was wir versprechen, halten wir auch – für eine reibungslose Abwicklung Ihres Projekts ohne Verzögerungen.",
               },
               {
                 icon: MapPin,
