@@ -22,9 +22,11 @@ export default {
     extend: {
       fontFamily: {
         sans: [
+          "Aktiv Grotesk",
           "Inter",
           "system-ui",
           "-apple-system",
+          "BlinkMacSystemFont",
           "Segoe UI",
           "Roboto",
           "Helvetica Neue",
