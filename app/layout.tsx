@@ -33,6 +33,12 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        <link rel="preconnect" href="https://res.cloudinary.com" />
+        <link
+          rel="preload"
+          href="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1920,h_800,c_fill/v1748344821/comprised_m7hork.avif"
+          as="image"
+        />
         <link
           rel="preload"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
