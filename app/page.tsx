@@ -406,11 +406,7 @@ export default function Home() {
           </div>
 
           {/* Carousel Container */}
-          <div className="text-center">
-            <p className="text-gray-600">
-              Google Reviews Carousel wird geladen...
-            </p>
-          </div>
+          <GoogleReviewsCarousel />
         </div>
       </section>
 
