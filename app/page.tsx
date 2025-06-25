@@ -11,6 +11,7 @@ import {
   Instagram,
   Quote,
 } from "lucide-react";
+import { GoogleReviewsCarousel } from "@/src/components/GoogleReviewsCarousel";
 
 export default function Home() {
   return (
