@@ -41,7 +41,7 @@ export default function Home() {
         <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
           {/* Main Headline */}
           <h1 className="text-white text-3xl md:text-5xl font-bold mb-4 md:mb-6 filter drop-shadow-lg">
-            ssIhr Maler in Winterthur für Präzision, Sauberkeit & Begeisterung
+            Ihr Maler in Winterthur für Präzision, Sauberkeit & Begeisterung
           </h1>
 
           {/* Subtitle Text */}
@@ -208,7 +208,7 @@ export default function Home() {
                   "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,f_avif,q_auto:eco/v1750015382/altbauwohnung-meilen_lrttoc.avif",
                 title: "Fassadenrenovation",
                 description:
-                  "Wir sorgen für neue Ausstrahlung und langfristigen Schutz Ihrer Fassade.",
+                  "Wir sorgen f��r neue Ausstrahlung und langfristigen Schutz Ihrer Fassade.",
               },
               {
                 href: "/leistungen/gipserarbeiten",
