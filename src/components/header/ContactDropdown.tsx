@@ -132,16 +132,6 @@ export function ContactDropdown({
                     Unverbindliche Anfrage senden
                   </div>
                 </Link>
-
-                {/* Business hours display */}
-                <div className="pt-2 border-t border-gray-100">
-                  <div className="text-xs text-gray-500 font-sans">
-                    <div className="font-medium mb-1">Geschäftszeiten:</div>
-                    <div>Mo-Fr: 8:00-17:00</div>
-                    <div>Sa: 8:00-12:00</div>
-                    <div>So: Geschlossen</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
