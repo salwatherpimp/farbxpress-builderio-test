@@ -23,12 +23,14 @@ export default function Home() {
         {/* Background Image Layer */}
         <div className="absolute inset-0">
           <Image
-            src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1920,h_800,c_fill/v1748344821/comprised_m7hork.avif"
+            src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_1920,h_800,c_fill,f_avif,q_auto/v1748344821/comprised_m7hork.avif"
             alt="Professional painter working in Winterthur"
             width={1920}
             height={800}
             className="w-full h-full object-cover object-center"
             priority
+            fetchPriority="high"
+            sizes="100vw"
           />
         </div>
 
@@ -39,7 +41,7 @@ export default function Home() {
         <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
           {/* Main Headline */}
           <h1 className="text-white text-3xl md:text-5xl font-bold mb-4 md:mb-6 filter drop-shadow-lg">
-            xIhr Maler in Winterthur für Präzision, Sauberkeit & Begeisterung
+            xyIhr Maler in Winterthur für Präzision, Sauberkeit & Begeisterung
           </h1>
 
           {/* Subtitle Text */}
@@ -146,21 +148,16 @@ export default function Home() {
             <div className="relative">
               {/* Image Container */}
               <div className="relative rounded-lg overflow-hidden shadow-lg">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcSet="https://res.cloudinary.com/dwlk9of7h/image/upload/v1748417853/ross-samir-farbxpress_gsnje4.avif"
-                  />
-                  <Image
-                    src="https://res.cloudinary.com/dwlk9of7h/image/upload/v1748417853/ross-samir-farbxpress_gsnje4.avif"
-                    alt="Unser erfahrenes Team bei der Arbeit"
-                    width={600}
-                    height={400}
-                    className="w-full h-64 md:h-80 object-cover object-top"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
+                <Image
+                  src="https://res.cloudinary.com/dwlk9of7h/image/upload/w_600,h_400,c_fill,f_avif,q_auto/v1748417853/ross-samir-farbxpress_gsnje4.avif"
+                  alt="Unser erfahrenes Team bei der Arbeit"
+                  width={600}
+                  height={400}
+                  className="w-full h-64 md:h-80 object-cover object-top"
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
 
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/15 to-transparent" />
@@ -200,7 +197,7 @@ export default function Home() {
               {
                 href: "/leistungen/malerarbeiten",
                 image:
-                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-malen_gdvdci.avif",
+                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,f_avif,q_auto:eco/v1748417852/farbxpress-malen_gdvdci.avif",
                 title: "Malerarbeiten",
                 description:
                   "Innen- und Aussenanstriche mit hochwertigen Materialien und präziser Ausführung.",
@@ -208,7 +205,7 @@ export default function Home() {
               {
                 href: "/leistungen/fassadenrenovation",
                 image:
-                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1750015382/altbauwohnung-meilen_lrttoc.avif",
+                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,f_avif,q_auto:eco/v1750015382/altbauwohnung-meilen_lrttoc.avif",
                 title: "Fassadenrenovation",
                 description:
                   "Wir sorgen für neue Ausstrahlung und langfristigen Schutz Ihrer Fassade.",
@@ -216,7 +213,7 @@ export default function Home() {
               {
                 href: "/leistungen/gipserarbeiten",
                 image:
-                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1749930415/verputz-malerarbeiten-duebendorf-1_zxk4wi.avif",
+                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,f_avif,q_auto:eco/v1749930415/verputz-malerarbeiten-duebendorf-1_zxk4wi.avif",
                 title: "Gipserarbeiten",
                 description:
                   "Innenputz, Aussenputz und dekorative Oberflächen – sauber und langlebig.",
@@ -224,7 +221,7 @@ export default function Home() {
               {
                 href: "/leistungen/tapezieren",
                 image:
-                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-tapezieren_jvtgyo.avif",
+                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,f_avif,q_auto:eco/v1748417852/farbxpress-tapezieren_jvtgyo.avif",
                 title: "Tapezieren",
                 description:
                   "Moderne oder klassische Tapeten – fachgerecht angebracht mit Auge fürs Detail.",
@@ -232,7 +229,7 @@ export default function Home() {
               {
                 href: "/leistungen/spritzarbeiten",
                 image:
-                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-spritzen_ij8jsj.avif",
+                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,f_avif,q_auto:eco/v1748417852/farbxpress-spritzen_ij8jsj.avif",
                 title: "Spritzarbeiten",
                 description:
                   "Effiziente, gleichmässige Beschichtung grosser Flächen in Top-Qualität.",
@@ -240,7 +237,7 @@ export default function Home() {
               {
                 href: "/leistungen/weitere-dienstleistungen",
                 image:
-                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill/v1748417852/farbxpress-weitereLeistungen_cyduu7.avif",
+                  "https://res.cloudinary.com/dwlk9of7h/image/upload/w_400,h_200,c_fill,f_avif,q_auto:eco/v1748417852/farbxpress-weitereLeistungen_cyduu7.avif",
                 title: "Weitere Dienstleistungen",
                 description:
                   "Erfahren Sie mehr über unsere Zusatzleistungen: Beschriftungen, Schimmelbehandlung und fugenlose Wand- und Bodenbeschichtungen.",
@@ -259,6 +256,8 @@ export default function Home() {
                       width={400}
                       height={200}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                   </div>
@@ -328,11 +327,13 @@ export default function Home() {
       <section className="bg-white relative">
         <div className="relative w-full">
           <Image
-            src="https://res.cloudinary.com/dwlk9of7h/image/upload/f_webp,q_90,w_1920,h_600,c_fill/v1748418221/farbxpress-footerImage_l29cqf.avif"
+            src="https://res.cloudinary.com/dwlk9of7h/image/upload/f_avif,q_auto:eco,w_1920,h_600,c_fill/v1748418221/farbxpress-footerImage_l29cqf.avif"
             alt="Renovierter Raum mit hochwertiger Malerarbeit"
             width={1920}
             height={600}
             className="w-full h-[28rem] object-cover"
+            loading="lazy"
+            sizes="100vw"
           />
           <div className="absolute inset-0 flex items-center justify-start px-4 md:px-12 py-12">
             <div className="max-w-lg text-left">
