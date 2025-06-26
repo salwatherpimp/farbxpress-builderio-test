@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  // Only use static export for production builds
+  ...(process.env.NODE_ENV === "production" && { output: "export" }),
+
   images: {
     unoptimized: true,
     domains: [
@@ -10,7 +12,7 @@ const nextConfig = {
     ],
   },
 
-  trailingSlash: false,
+  trailingSlash: true,
 
   // Allow Builder.io domain for cross-origin requests
   allowedDevOrigins: [
