@@ -41,11 +41,7 @@ export default function Home() {
         <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
           {/* Main Headline */}
           <h1 className="text-white text-3xl md:text-5xl font-bold mb-4 md:mb-6 filter drop-shadow-lg">
-<<<<<<< HEAD
             Ihr Maler in Winterthur für Präzision, Sauberkeit & Begeisterung
-=======
-            ssIhr Maler in Winterthur für Präzision, Sauberkeit & Begeisterung
->>>>>>> a72d89d8bc7963ded996a800b15f49d8c13390f2
           </h1>
 
           {/* Subtitle Text */}
