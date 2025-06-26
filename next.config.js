@@ -10,7 +10,7 @@ const nextConfig = {
     ],
   },
 
-  trailingSlash: false,
+  trailingSlash: true,
 
   // Allow Builder.io domain for cross-origin requests
   allowedDevOrigins: [
