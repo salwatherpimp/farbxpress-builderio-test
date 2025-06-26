@@ -1,4 +1,3 @@
-
 name: Deploy via FTP
 
 on:
@@ -25,6 +24,16 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: List files in .next directory
+        run: ls -alh .next/
+
+      - name: Check if .next directory exists
+        run: |
+          if [ ! -d ".next" ]; then
+            echo "Error: '.next' directory does not exist."
+            exit 1
+          fi
+
       - name: Deploy to Hostpoint FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -33,5 +42,5 @@ jobs:
           password: ${{ secrets.HP_SFTP_PASS }}
           protocol: ftp
           port: 21
-          local-dir: out/
+          local-dir: .next/
           server-dir: /www/vezivofa.myhostpoint.ch/
