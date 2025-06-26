@@ -24,13 +24,16 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: List files in .next directory
-        run: ls -alh .next/
+      - name: Export static site
+        run: npm run export  # Statische Version der Website erstellen
 
-      - name: Check if .next directory exists
+      - name: List files in out directory
+        run: ls -alh out/  # Überprüfen, ob der Export erfolgreich war
+
+      - name: Check if out directory exists
         run: |
-          if [ ! -d ".next" ]; then
-            echo "Error: '.next' directory does not exist."
+          if [ ! -d "out" ]; then
+            echo "Error: 'out' directory does not exist."
             exit 1
           fi
 
@@ -42,5 +45,5 @@ jobs:
           password: ${{ secrets.HP_SFTP_PASS }}
           protocol: ftp
           port: 21
-          local-dir: .next/
+          local-dir: out/
           server-dir: /www/vezivofa.myhostpoint.ch/
